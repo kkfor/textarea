@@ -7,14 +7,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = merge(webpackBaseConfig, {
   mode: 'development',
   devtool: 'cheap-module-source-map',
-  entry: ['./example/index.ts'],
+  entry: ['./public/index.ts'],
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'index.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './example/index.html'
+      template: './public/index.html'
     }),
     new webpack.HotModuleReplacementPlugin()
   ],
